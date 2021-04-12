@@ -77,7 +77,7 @@ while True:
     else:
         if mode == "gpt2":
             inputs = gpt2_tokenizer.encode(prompt, return_tensors='pt')
-            outputs = gpt2_model.generate(inputs, min_length=125, max_length=250, temperature=0.1, do_sample=True, pad_token_id=gpt2_tokenizer.eos_token_id, repetition_penalty=5.1)
+            outputs = gpt2_model.generate(inputs, min_length=125, max_length=275, temperature=0.1, do_sample=True, pad_token_id=gpt2_tokenizer.eos_token_id, repetition_penalty=5.1)
             text = gpt2_tokenizer.decode(outputs[0], skip_special_tokens=True)
             print(text)
 
@@ -101,4 +101,3 @@ while True:
             text = json.loads(req.text)[0]["summary_text"]
             print(text)
     print("")
-
