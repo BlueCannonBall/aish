@@ -22,8 +22,8 @@ BOLDMAGENTA = "\033[1m\033[35m"
 BOLDCYAN    = "\033[1m\033[36m"
 BOLDWHITE   = "\033[1m\033[37m"
 
-gpt2_tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
-gpt2_model = GPT2LMHeadModel.from_pretrained('gpt2-medium')
+gpt2_tokenizer = GPT2Tokenizer.from_pretrained('gpt2-large')
+gpt2_model = GPT2LMHeadModel.from_pretrained('gpt2-large')
 
 dialogpt_tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 dialogpt_model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
